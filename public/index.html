@@ -38,7 +38,7 @@
               mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se
               estabelece como a personificação da vingança para a população.
             </p>
-            <button class="button" type="button">Comprar ingresso</button>
+            <button id="btn-comprar" class="button">Comprar ingresso</button>
           </div>
         </div>
       </section>
@@ -75,5 +75,54 @@
         </ul>
       </nav>
     </footer>
+
+    <!-- Modal de Simulação de Compra -->
+    <div id="modal-compra" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Simulação de Compra de Ingresso</h2>
+        <p class="modal-subtitle">Filme: <strong>The Batman (2022)</strong></p>
+
+        <form id="form-compra">
+          <div class="input-group">
+            <label for="data-sessao">Data e Horário:</label>
+            <select id="data-sessao" required>
+              <option value="">Selecione uma sessão...</option>
+              <option value="Hoje - 18:30 (SALA 01 - IMAX)">Hoje - 18:30 (SALA 01 - IMAX)</option>
+              <option value="Hoje - 21:15 (SALA 03 - 2D)">Hoje - 21:15 (SALA 03 - 2D)</option>
+              <option value="Amanhã - 19:00 (SALA 01 - IMAX)">Amanhã - 19:00 (SALA 01 - IMAX)</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="tipo-ingresso">Tipo de Ingresso:</label>
+            <select id="tipo-ingresso" required>
+              <option value="30.00">Inteira — R$ 30,00</option>
+              <option value="15.00">Meia-Entrada — R$ 15,00</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="qtd-ingresso">Quantidade:</label>
+            <input type="number" id="qtd-ingresso" min="1" max="10" value="1" required />
+          </div>
+
+          <div class="resumo-compra">
+            <span>Total a Pagar:</span>
+            <strong id="valor-total">R$ 30,00</strong>
+          </div>
+
+          <button type="submit" class="button btn-confirmar">Confirmar Simulação</button>
+        </form>
+
+        <div id="mensagem-sucesso" class="sucesso-container" style="display: none;">
+          <div class="icone-sucesso">✓</div>
+          <h3>Ingresso Reservado com Sucesso!</h3>
+          <p id="detalhes-ticket"></p>
+          <button id="btn-fechar-sucesso" class="button">Concluir</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/ingressos.js"></script>
   </body>
 </html>

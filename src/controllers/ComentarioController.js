@@ -1,7 +1,8 @@
 const Comentario = require('../models/Comentario');
 
 exports.criarComentario = async (request, response) => {
-    const { nome, email, mensagem } = request.body || {};
+    const { nome, email, mensagem, nota } = request.body || {};
+    const notaNormalizada = Number(nota);
 
     if (
         typeof nome !== 'string' ||
@@ -9,9 +10,12 @@ exports.criarComentario = async (request, response) => {
         typeof mensagem !== 'string' ||
         !nome.trim() ||
         !email.trim() ||
-        !mensagem.trim()
+        !mensagem.trim() ||
+        !Number.isInteger(notaNormalizada) ||
+        notaNormalizada < 1 ||
+        notaNormalizada > 5
     ) {
-        return response.status(400).json({ erro: 'Preencha todos os campos!' });
+        return response.status(400).json({ erro: 'Preencha todos os campos e informe uma nota de 1 a 5.' });
     }
 
     const nomeNormalizado = nome.trim();
@@ -23,7 +27,7 @@ exports.criarComentario = async (request, response) => {
     }
 
     try {
-        await Comentario.salvar(nomeNormalizado, emailNormalizado, mensagemNormalizada);
+        await Comentario.salvar(nomeNormalizado, emailNormalizado, mensagemNormalizada, notaNormalizada);
         return response.status(201).json({ mensagem: 'Comentário gravado com sucesso!' });
     } catch (error) {
         console.error('Erro ao guardar comentário:', error);

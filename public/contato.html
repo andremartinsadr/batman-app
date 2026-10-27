@@ -21,43 +21,113 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="contact-container page-main">
       <section class="page-hero">
-        <p class="eyebrow">Batman 2022</p>
+        <p class="subtitle eyebrow">Batman 2022</p>
         <h1>Fale com a equipe</h1>
       </section>
 
-      <section class="contact-shell">
-        <form class="contact-form">
-          <label>
-            Nome
-            <input type="text" placeholder="Seu nome" />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="seu@email.com" />
-          </label>
-          <label>
-            Mensagem
-            <textarea rows="6" placeholder="Escreva sua mensagem..."></textarea>
-          </label>
-          <button class="button" type="submit">Enviar mensagem</button>
-        </form>
+      <div class="contact-content contact-shell">
+        <div class="contact-primary">
+          <form id="form-contato" class="contact-form">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="" selected disabled>Selecione o assunto...</option>
+                <option value="ingressos">Dúvidas sobre Ingressos</option>
+                <option value="imprensa">Imprensa &amp; Parcerias</option>
+                <option value="sugestao">Sugestões ou Elogios</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+            </div>
+
+            <button type="submit" class="button">Enviar mensagem</button>
+          </form>
+
+          <section class="contact-faq" aria-labelledby="faq-title">
+            <p class="eyebrow">Ajuda</p>
+            <h2 id="faq-title">Perguntas frequentes</h2>
+            <details class="faq-item">
+              <summary>Qual é a classificação indicativa do filme?</summary>
+              <p>A classificação pode variar conforme o país e a sala de cinema. Consulte a programação local antes da sessão.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Como funciona a simulação de ingressos?</summary>
+              <p>A simulação demonstra a escolha de sessão, tipo e quantidade de ingressos. Ela não processa pagamentos nem reserva lugares reais.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Onde posso consultar os horários das sessões?</summary>
+              <p>Consulte a programação do cinema da sua região para confirmar horários e disponibilidade.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Como posso falar com a equipe?</summary>
+              <p>Use o formulário desta página ou os contactos informativos apresentados ao lado.</p>
+            </details>
+          </section>
+        </div>
 
         <aside class="contact-info">
           <div class="info-card">
-            <h2>Contato</h2>
-            <p>Gotham City, DC Universe</p>
-            <p>(11) 4002-8922</p>
-            <p>contato@batmanmovie.com</p>
+            <h2>Contato Directo</h2>
+            <p class="contact-detail">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+              <span>Gotham City, DC Universe</span>
+            </p>
+            <p class="contact-detail">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4h3l2 5-2 1.5a15 15 0 0 0 5.5 5.5L15 14l5 2v3a2 2 0 0 1-2 2C9.7 20.5 3.5 14.3 3 6a2 2 0 0 1 2-2Z"/></svg>
+              <a href="tel:+551140028922">(11) 4002-8922</a>
+            </p>
+            <p class="contact-detail">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+              <a href="mailto:contato@batmanmovie.com">contato@batmanmovie.com</a>
+            </p>
           </div>
           <div class="info-card">
-            <h2>Horários</h2>
+            <h2>Horários de Atendimento</h2>
             <p>Segunda a sexta: 08h às 18h</p>
             <p>Sábado: 09h às 13h</p>
           </div>
+          <div class="gotham-map" role="img" aria-label="Mapa ilustrativo de Gotham City com a localização fictícia da Wayne Enterprises">
+            <span class="map-label">GOTHAM CITY</span>
+            <span class="map-route map-route-one"></span>
+            <span class="map-route map-route-two"></span>
+            <span class="map-pin" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <strong>Wayne Enterprises</strong>
+            <span>Distrito Financeiro · Gotham</span>
+          </div>
+          <div class="info-card social-card">
+            <h2>Redes sociais temáticas</h2>
+            <p class="social-links">
+              <a href="https://www.instagram.com/thebatman/" target="_blank" rel="noopener noreferrer" aria-label="Instagram temático The Batman">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="icon-fill" cx="18" cy="6" r="1"/></svg>
+                @TheBatman
+              </a>
+              <a href="https://x.com/TheBatman" target="_blank" rel="noopener noreferrer" aria-label="Perfil temático The Batman no X">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18.9 3H22l-6.8 7.8L23.2 21h-6.3l-5-6.5L6.2 21H3l7.3-8.4L2.7 3h6.5l4.5 6L18.9 3Zm-1.1 16h1.7L8.2 4.9H6.4L17.8 19Z"/></svg>
+                /BatmanMovie
+              </a>
+            </p>
+            <small>Perfis temáticos; não representam canais oficiais.</small>
+          </div>
         </aside>
-      </section>
+      </div>
     </main>
 
     <footer class="site-footer">
