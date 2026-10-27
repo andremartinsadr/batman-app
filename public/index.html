@@ -45,35 +45,40 @@
 
       <section class="actor-cards-container" aria-label="Elenco principal">
         <div class="cards-content">
-          <article class="card banner-1">
-            <span>Robert Pattinson</span>
-            <strong>Batman</strong>
+          <article class="card banner-1" data-ator="pattinson" role="button" tabindex="0" aria-label="Ver informações sobre Robert Pattinson como Batman">
+            <div class="card-info">
+              <h3>Robert Pattinson</h3>
+              <p>Batman / Bruce Wayne</p>
+            </div>
           </article>
-          <article class="card banner-2">
-            <span>Zoe Kravitz</span>
-            <strong>Mulher-Gato</strong>
+          <article class="card banner-2" data-ator="kravitz" role="button" tabindex="0" aria-label="Ver informações sobre Zoë Kravitz como Mulher-Gato">
+            <div class="card-info">
+              <h3>Zoë Kravitz</h3>
+              <p>Mulher-Gato / Selina Kyle</p>
+            </div>
           </article>
-          <article class="card banner-3">
-            <span>Jeffrey Wright</span>
-            <strong>James Gordon</strong>
+          <article class="card banner-3" data-ator="wright" role="button" tabindex="0" aria-label="Ver informações sobre Jeffrey Wright como James Gordon">
+            <div class="card-info">
+              <h3>Jeffrey Wright</h3>
+              <p>James Gordon</p>
+            </div>
           </article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <img id="logo-footer" src="./logo_batman.jpg" alt="Logo do Batman" />
-      <span>Todos os direitos reservados ©</span>
-      <span>Desenvolvido por: Andre Martins</span>
-
-      <nav class="footer-navigation" aria-label="Navegação do rodapé">
-        <ul class="footer-list">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./contato.html">Contato</a></li>
-          <li><a href="./fotos.html">Fotos</a></li>
-          <li><a href="./comentarios.html">Comentários</a></li>
-        </ul>
-      </nav>
+    <footer class="footer-academico">
+      <div class="footer-content">
+        <p><strong>Projeto Integrador Transdisciplinar II (PIT II)</strong></p>
+        <p>Desenvolvido por: <strong>André Martins Ribeiro</strong></p>
+        <p>Curso: Engenharia de Software | Cruzeiro do Sul Virtual</p>
+        <div class="footer-links">
+          <a href="https://github.com/andremartinsadr/batman-app" target="_blank" rel="noopener noreferrer">💻 Código Fonte (GitHub)</a>
+          <span class="divisor" aria-hidden="true">|</span>
+          <a href="https://github.com/andremartinsadr/batman-docs" target="_blank" rel="noopener noreferrer">📄 Documentação (UML/DER)</a>
+        </div>
+        <span class="copyright">© 2026 — Todos os direitos reservados.</span>
+      </div>
     </footer>
 
     <!-- Modal de Simulação de Compra -->
@@ -124,5 +129,25 @@
       </div>
     </div>
     <script src="./js/ingressos.js"></script>
+    <div id="modal-ator" class="modal modal-ator" role="dialog" aria-modal="true" aria-labelledby="ator-nome" aria-hidden="true">
+      <div class="modal-content modal-ator-content">
+        <button class="close-modal-ator" type="button" aria-label="Fechar informações do elenco">&times;</button>
+        <div class="ator-info-grid">
+          <div id="ator-foto" class="ator-foto-card" role="img"></div>
+          <div class="ator-detalhes">
+            <h2 id="ator-nome"></h2>
+            <h3 id="ator-personagem"></h3>
+            <div class="ator-divisor"></div>
+
+            <h4>Sobre o Personagem:</h4>
+            <p id="ator-bio-personagem"></p>
+
+            <h4>Comentário do Ator:</h4>
+            <blockquote id="ator-citacao">Nenhuma citação foi fornecida.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/atores.js"></script>
   </body>
 </html>

@@ -198,11 +198,25 @@ textarea {
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.5);
 }
 
-.card span,
-.card strong {
+.card-info h3,
+.card-info p {
   display: block;
+  margin: 0;
   color: #fff;
+}
+
+.card-info h3 {
   font-size: 1.2rem;
+}
+
+.card-info p {
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.card-info {
+  position: relative;
+  z-index: 1;
 }
 
 .banner-1 {
@@ -799,6 +813,57 @@ textarea::placeholder {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.footer-academico {
+  padding: 28px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0c0c0c;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer-content {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.footer-content strong {
+  color: #eee;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.footer-links a {
+  color: #ddd;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--primary);
+}
+
+.footer-links .divisor {
+  color: #555;
+}
+
+.footer-content .copyright {
+  color: #777;
+  font-size: 0.8rem;
+}
+
 .footer-navigation {
   display: none;
 }
@@ -902,6 +967,115 @@ textarea::placeholder {
   box-shadow: 0 0 25px rgba(210, 22, 23, 0.5);
   position: relative;
   color: #fff;
+}
+
+.modal-ator {
+  z-index: 1001;
+}
+
+.modal-ator-content {
+  width: min(100%, 700px);
+  padding: 24px;
+}
+
+.close-modal-ator {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.close-modal-ator:hover,
+.close-modal-ator:focus-visible {
+  color: var(--primary);
+}
+
+.ator-info-grid {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.ator-foto-card {
+  width: 220px;
+  height: 320px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgba(210, 22, 23, 0.5);
+  box-shadow: 0 0 15px rgba(210, 22, 23, 0.3);
+}
+
+.ator-detalhes {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ator-detalhes h2 {
+  margin: 0;
+  padding-right: 36px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.ator-detalhes h3 {
+  margin: 0;
+  color: #d21617;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ator-divisor {
+  height: 1px;
+  margin: 10px 0;
+  background: linear-gradient(90deg, #d21617 0%, transparent 100%);
+}
+
+.ator-detalhes h4 {
+  margin: 5px 0 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.ator-detalhes p {
+  margin: 0;
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ator-detalhes blockquote {
+  margin: 5px 0 0;
+  padding: 10px 15px;
+  border-left: 3px solid #d21617;
+  border-radius: 0 5px 5px 0;
+  background: rgba(210, 22, 23, 0.1);
+  color: #e0e0e0;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.card[role="button"] {
+  cursor: pointer;
+}
+
+.card[role="button"]:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
 }
 
 .close-modal {
@@ -1102,5 +1276,17 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .comments-content {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .ator-info-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ator-foto-card {
+    width: 100%;
+    height: 250px;
   }
 }
