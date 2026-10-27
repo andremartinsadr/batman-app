@@ -814,25 +814,29 @@ textarea::placeholder {
 }
 
 .footer-academico {
-  padding: 28px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: #0c0c0c;
+  margin-top: 40px;
+  padding: 30px 20px;
+  border-top: 1px solid #222;
+  background-color: #080808;
   color: #aaa;
+  font-size: 14px;
   text-align: center;
 }
 
 .footer-content {
-  width: min(100%, 900px);
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-content p {
-  margin: 6px 0;
-  font-size: 0.9rem;
+  margin: 0;
+  color: #ccc;
 }
 
 .footer-content strong {
-  color: #eee;
+  color: #fff;
 }
 
 .footer-links {
@@ -840,28 +844,30 @@ textarea::placeholder {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 16px 0;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .footer-links a {
-  color: #ddd;
-  font-size: 0.9rem;
-  transition: color 0.2s ease;
+  color: #d21617;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover,
 .footer-links a:focus-visible {
-  color: var(--primary);
+  color: #fff;
+  text-decoration: underline;
 }
 
 .footer-links .divisor {
-  color: #555;
+  color: #444;
 }
 
 .footer-content .copyright {
-  color: #777;
-  font-size: 0.8rem;
+  margin-top: 12px;
+  color: #666;
+  font-size: 12px;
 }
 
 .footer-navigation {
