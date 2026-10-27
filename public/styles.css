@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #050505 0%, #120d0d 100%);
+  background: #0d0d0d;
   color: var(--text);
   font-family: "Kdam Thmor Pro", sans-serif;
   line-height: 1.6;
@@ -49,8 +49,8 @@ textarea {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(5, 5, 5, 0.96);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #000;
+  border-bottom: 2px solid var(--primary);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -86,11 +86,17 @@ textarea {
 }
 
 .hero-banner {
-  background-image: url('https://pbs.twimg.com/media/FBwMEAMWQAA6BOO.jpg');
+  background-color: #120303;
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, #0d0d0d 100%),
+    url('./images/banner.jpg'),
+    radial-gradient(ellipse at 68% 28%, rgba(210, 22, 23, 0.55), transparent 38%),
+    linear-gradient(120deg, #171717 15%, #3b1214 52%, #090909);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 600px;
+  height: 480px;
 }
 
 #trailer-container,
@@ -104,44 +110,54 @@ textarea {
 }
 
 .content {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 40px;
 }
 
 .trailer {
-  width: min(100%, 650px);
-  border-radius: 12px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  width: 58%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(210, 22, 23, 0.4);
+  border: 1px solid rgba(210, 22, 23, 0.3);
 }
 
 #sinopse {
-  width: min(100%, 500px);
+  width: 38%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 0;
 }
 
 .description {
   color: #fff;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.6;
+  width: 100%;
 }
 
 .button {
   width: 220px;
-  height: 58px;
+  height: 50px;
   background: var(--primary);
   color: #fff;
   padding: 8px 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background 0.35s ease, transform 0.35s ease;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 700;
-  margin-top: 25px;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(210, 22, 23, 0.4);
 }
 
 .button:hover {
@@ -190,15 +206,28 @@ textarea {
 }
 
 .banner-1 {
-  background-image: url('https://noticiasdatv.uol.com.br/media/uploads/artigos_2021/batman-robert-pattinson-foto-divulgacao-warner-bros.jpg');
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+    url('https://noticiasdatv.uol.com.br/media/uploads/artigos_2021/batman-robert-pattinson-foto-divulgacao-warner-bros.jpg'),
+    radial-gradient(ellipse at 55% 25%, #49252a, transparent 55%),
+    linear-gradient(145deg, #352125, #111);
 }
 
 .banner-2 {
-  background-image: url('https://th.bing.com/th/id/OIP.y9E2YaM0ZUxYPEyuza8RBwAAAA?rs=1&pid=ImgDetMain');
+  background-color: #1c1c1c;
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+    url('./images/catwoman.jpg'),
+    radial-gradient(ellipse at 55% 25%, #49252a, transparent 55%),
+    linear-gradient(145deg, #352125, #111);
 }
 
 .banner-3 {
-  background-image: url('https://preview.redd.it/opinions-on-jeffrey-wrights-gordon-v0-l617izc155sb1.png?auto=webp&s=d86970095d58cf4443cf974ced11c68dd31e93bf');
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+    url('https://preview.redd.it/opinions-on-jeffrey-wrights-gordon-v0-l617izc155sb1.png?auto=webp&s=d86970095d58cf4443cf974ced11c68dd31e93bf'),
+    radial-gradient(ellipse at 55% 25%, #49252a, transparent 55%),
+    linear-gradient(145deg, #352125, #111);
 }
 
 .page-main {
@@ -328,27 +357,34 @@ textarea::placeholder {
 }
 
 .photo-1 {
-  background-image: url('https://images.hdqwalls.com/wallpapers/batman-2022-dark-knight-5k-xo.jpg');
+  background-image: url('./images/batman-em-gotham.webp');
 }
 
 .photo-2 {
-  background-image: url('https://images.unsplash.com/photo-1531259683007-016a7b628fc3?auto=format&fit=crop&w=900&q=80');
+  background-image: url('./images/mulher-gato-galeria.jpg');
+  background-color: #111;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .photo-3 {
-  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80');
+  background-image: url('./images/alfred-e-bruce-galeria.jpeg');
 }
 
 .photo-4 {
-  background-image: url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?auto=format&fit=crop&w=900&q=80');
+  background-image: url('./images/gotham-a-noite-galeria.jpg');
+  background-color: #111;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .photo-5 {
-  background-image: url('https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80');
+  background-image: url('./images/vigilante-galeria.jpg');
 }
 
 .photo-6 {
-  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80');
+  background-image: url('./images/james-gordon-galeria.png');
 }
 
 .site-footer {
@@ -413,7 +449,12 @@ textarea::placeholder {
   }
 
   .hero-banner {
-    height: 360px;
+    height: 300px;
+  }
+
+  .trailer,
+  #sinopse {
+    width: 100%;
   }
 
   .site-footer {
