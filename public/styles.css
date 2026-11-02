@@ -85,6 +85,18 @@ textarea {
   color: var(--primary);
 }
 
+.main-menu a[aria-current="page"] {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.main-menu a:focus-visible,
+.logo-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 5px;
+}
+
 .hero-banner {
   background-color: #120303;
   background-image:
