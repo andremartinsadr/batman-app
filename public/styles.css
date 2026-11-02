@@ -131,13 +131,34 @@ textarea {
   gap: 40px;
 }
 
-.trailer {
+.trailer-wrapper {
   width: 58%;
+}
+
+.trailer {
+  width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  display: block;
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(210, 22, 23, 0.4);
   border: 1px solid rgba(210, 22, 23, 0.3);
+}
+
+.trailer-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.trailer-link:hover {
+  color: var(--primary);
+}
+
+.trailer-link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
 }
 
 #sinopse {
@@ -949,7 +970,7 @@ textarea::placeholder {
     height: 300px;
   }
 
-  .trailer,
+  .trailer-wrapper,
   #sinopse {
     width: 100%;
   }
